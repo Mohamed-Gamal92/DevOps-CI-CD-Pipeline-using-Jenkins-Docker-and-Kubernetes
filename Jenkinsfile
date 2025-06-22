@@ -42,8 +42,8 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-creds') {
-                        docker.image("tpathak21/devops-backend:latest").push()
-                        docker.image("tpathak21/devops-frontend:latest").push()
+                        docker.image("malek10/devops-backend:latest").push()
+                        docker.image("malek10/devops-frontend:latest").push()
                     }
                 }
             }
