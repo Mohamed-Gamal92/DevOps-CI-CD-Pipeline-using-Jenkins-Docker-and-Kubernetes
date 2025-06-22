@@ -8,14 +8,14 @@ pipeline {
     stages {
         stage('Checkout Code from GitHub') {
             steps {
-                git branch: 'main', url: 'https://github.com/TejPATHAK/DevOps-CI-CD-Pipeline-using-Jenkins-Docker-and-Kubernetes.git'
+                git branch: 'main', url: 'https://github.com/Mohamed-Gamal92/DevOps-CI-CD-Pipeline-using-Jenkins-Docker-and-Kubernetes.git'
             }
         }
 
         stage('Build Backend Image') {
             steps {
                 script {
-                    docker.build("tpathak21/devops-backend:latest", "./backend")
+                    docker.build("malek10/devops-backend:latest", "./backend")
                 }
             }
         }
@@ -23,7 +23,7 @@ pipeline {
         stage('Build Frontend Image') {
             steps {
                 script {
-                    docker.build("tpathak21/devops-frontend:latest", "./frontend")
+                    docker.build("malek10/devops-frontend:latest", "./frontend")
                 }
             }
         }
